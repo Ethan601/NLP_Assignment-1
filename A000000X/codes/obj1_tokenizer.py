@@ -68,7 +68,7 @@ class Tokenizer:
             self.text = self.text.lower()
 
         if not self.bpe:
-            pattern = r"\w+[']\w*|\d+[./]\d+|[\w-]+|\d+|[,.;:]"
+            pattern = r"\w+[']\w*|\d+[./]\d+|[\w-]+|\d+|[,.;:!?]"
             # return regexp_tokenize(self.text, pattern)
             return re.findall(pattern, self.text)
         elif self.bpe:
